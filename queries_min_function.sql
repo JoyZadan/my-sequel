@@ -1,5 +1,5 @@
 /*
-Get a count of all of the records or rows in the `Customer` table
+Get minimum value from `Customer` table
 */
 SELECT MIN(LastName) FROM Customer;
 
