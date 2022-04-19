@@ -63,7 +63,7 @@ ORDER BY HireDate DESC, EmployeeId Desc
 LIMIT 3;
 
 /*
-Create a query that shows our 10 biggest invoices by Total value, in descending order.
+Challenge 4 Solution - Create a query that shows our 10 biggest invoices by Total value, in descending order.
 If two invoices have the same Total, the more recent should appear first.
 The query should also show the Name of the Customer
 */
