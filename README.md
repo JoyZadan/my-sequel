@@ -76,3 +76,8 @@
     Allows aggregate functions to be applied to subsets of records within a result, rather than to all records
     How do you use it?
     Group by a column or columns of repeating data
+## SQL in Action - The INSERT Statement
+    What is it?
+    A statement for adding new data to a relational database table
+    What does it do?
+    Inserts specified values into specified columns of a table.
