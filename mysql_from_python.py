@@ -2,6 +2,7 @@
 Imports
 """
 import os
+import datetime
 import pymysql
 
 # Our username is stored in the Gitpod workspace as an environment variable
@@ -24,11 +25,19 @@ try:
     # As an argument when creating the cursor
     # Using DictCursor returns rows that include the column names
     # This format also lends itself to being converted into JSON
-    with connection.cursor(pymysql.cursors.DictCursor) as cursor:
-        SEQUEL = "SELECT * FROM Genre;"
+    # Lines 30 to 33 must be indented if not commented out
+    # with connection.cursor(pymysql.cursors.DictCursor) as cursor:
+    # SEQUEL = "SELECT * FROM Genre;"
+    # cursor.execute(SEQUEL)
+    # for row in cursor:
+    # print(row)
+    # Creates a table (replaced code from walkthrough with below)
+    with connection.cursor() as cursor:
+        SEQUEL = """CREATE TABLE IF NOT EXISTS
+                    Friends(name char(20), age int, DOB datetime);"""
         cursor.execute(SEQUEL)
-        for row in cursor:
-            print(row)
+        # Note that the above will still display a warning (not error) if the
+        # table already exists
 finally:
     # Close the connection, regardless of whether the above was successful
     connection.close()
