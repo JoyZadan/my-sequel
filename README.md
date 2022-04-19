@@ -55,3 +55,10 @@
     Returns the average value from a specified column in a query result or group
     How do you use it?
     AVG(column) or AVG(expression)
+## SQL in Action - The ROUND Function
+    What is it?
+    An aggregate function
+    What does it do?
+    Returns a specified value, rounded to a specified number of decimal places
+    How do you use it?
+    ROUND(column, precision) or ROUND(expression, precision)
