@@ -16,11 +16,19 @@ connection = pymysql.connect(host='localhost',
 
 try:
     # Run a query
-    with connection.cursor() as cursor:
-        SEQUEL = "SELECT * FROM Artist;"
+    # To return data to the application, we need to fetch the data
+    # By using a cursor method
+    # To retrieve the data into a variable which is iterable
+    # Use for each which returns the data where each row is a tuple
+    # Change type of cursor by passing pymysql.cursors.DictCursor
+    # As an argument when creating the cursor
+    # Using DictCursor returns rows that include the column names
+    # This format also lends itself to being converted into JSON
+    with connection.cursor(pymysql.cursors.DictCursor) as cursor:
+        SEQUEL = "SELECT * FROM Genre;"
         cursor.execute(SEQUEL)
-        result = cursor.fetchall()
-        print(result)
+        for row in cursor:
+            print(row)
 finally:
     # Close the connection, regardless of whether the above was successful
     connection.close()
