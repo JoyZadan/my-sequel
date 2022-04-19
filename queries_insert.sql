@@ -28,7 +28,7 @@ INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, 
 VALUES ("I Will Follow", 348, 2, 1, "U2", 220000, 1234, 0.99);
 
 /*
-Challenge 1 Solution - Insert the remaining Tracks for the Album Boy (except for the last 2-3,
+Challenge 1 and Solution - Insert the remaining Tracks for the Album Boy (except for the last 2-3,
 insert those as part of Challenge Three)
 */
 INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
@@ -53,14 +53,14 @@ INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, 
 VALUES ("A Day Without Me", 348, 2, 1, "U2", 185000, 1234, 0.99);
 
 /*
-Challenge 2 Solution - Run the following Query. It gives an error.
+Challenge 2 and Solution - Run the following Query. It gives an error.
 Read and understand the error, then fix the problem
 */
 INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
 VALUES ("Extra Track", 348, 2, 1, "U2", 185000, 1234, 0.99);
 
 /*
-Challenge 3 Solution - Use one insert statement to insert multiple tracks at the same time
+Challenge 3 and Solution - Use one insert statement to insert multiple tracks at the same time
 */
 INSERT INTO Track
     (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)

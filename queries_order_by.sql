@@ -34,14 +34,14 @@ ORDER BY Total DESC
 LIMIT 5;
 
 /*
-Challenge 1 Solution - Select the InvoiceDate, BillingAddress, and Total from the Invoices table,
+Challenge 1 and Solution - Select the InvoiceDate, BillingAddress, and Total from the Invoices table,
 Ordered by InvoiceDate Descending
 */
 SELECT InvoiceDate, BillingAddress, Total FROM Invoice
 ORDER BY InvoiceDate DESC;
 
 /*
-Challenge 2 Solution - We need to fire the last three people hired.
+Challenge 2 and Solution - We need to fire the last three people hired.
 Select the EmployeeId, LastName, FirstName and HireDate of the
 3 Employees with the most recent HireDate
 */
@@ -50,7 +50,7 @@ ORDER BY HireDate DESC
 LIMIT 3;
 
 /*
-Challenge 3 Solution - Disaster, we've heard from Steve Johnson's lawyers.
+Challenge 3 and Solution - Disaster, we've heard from Steve Johnson's lawyers.
 He claims that Michael Mitchell was hired on the same day as him, but was hired later in the day.
 Mitchell should have been let go, not him.
 Confirm this by extending the number of results and make sure nobody else was hired on that day.
@@ -63,7 +63,7 @@ ORDER BY HireDate DESC, EmployeeId Desc
 LIMIT 3;
 
 /*
-Challenge 4 Solution - Create a query that shows our 10 biggest invoices by Total value, in descending order.
+Challenge 4 and Solution - Create a query that shows our 10 biggest invoices by Total value, in descending order.
 If two invoices have the same Total, the more recent should appear first.
 The query should also show the Name of the Customer
 */

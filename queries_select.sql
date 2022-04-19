@@ -20,6 +20,6 @@ table
 select * from Track;
 
 /*
-Challenge 1 Solution - Select the 'Name' column from the 'MediaType' table
+Challenge 1 and Solution - Select the 'Name' column from the 'MediaType' table
 */
 select Name from MediaType;

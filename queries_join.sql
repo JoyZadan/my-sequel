@@ -54,7 +54,7 @@ INNER JOIN Artist on Album.ArtistId = Artist.ArtistId
 WHERE Track.Name = "Believe";
 
 /*
-Challenge 1 Solution - Join the 'Track' table and the 'MediaType' table to create a query
+Challenge 1 and Solution - Join the 'Track' table and the 'MediaType' table to create a query
 that shows the Name of the Track, and the Name of the Media Type. Both tables have
 a 'MediaTypeId' column that you can join on.
 */
@@ -62,7 +62,7 @@ SELECT Track.Name, MediaType.Name FROM Track
 INNER JOIN MediaType on Track.MediaTypeId = MediaType.MediaTypeId;
 
 /*
-Challenge 2 Solution - Similar Query to above, but join the track table to the Genre table,
+Challenge 2 and Solution - Similar Query to above, but join the track table to the Genre table,
 show the names of the tracks and genres in the results. Figure out the columns you can join on,
 any aliases that you need. Filter the results to only show 'Jazz' tracks
 */

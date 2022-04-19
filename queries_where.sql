@@ -11,7 +11,7 @@ select * from Album
 where AlbumId = 232;
 
 /*
-Challenge 1 Solution - Select the 'FirstName', 'LastName' and 'Title' Columns
+Challenge 1 and Solution - Select the 'FirstName', 'LastName' and 'Title' Columns
 from the 'Employee' Table. Filtering the results to only those with a Title of
 'IT Staff'.
 */
