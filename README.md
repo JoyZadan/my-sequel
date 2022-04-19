@@ -62,3 +62,10 @@
     Returns a specified value, rounded to a specified number of decimal places
     How do you use it?
     ROUND(column, precision) or ROUND(expression, precision)
+## SQL in Action - The SUM Function
+    What is it?
+    An aggregate function
+    What does it do?
+    Returns the sum of the values of a specified column in a query result or group
+    How do you use it?
+    SUM(column) or SUM(expression)
