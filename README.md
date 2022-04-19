@@ -27,3 +27,24 @@
     Sorts ascending or descending
     How do you use it?
     Use the ORDER BY command
+## SQL in Action - The COUNT Function
+    What is it?
+    An aggregate function
+    What does it do?
+    Returns the number of rows in a query result, or group
+    How do you use it?
+    count(column) or count(*)
+## SQL in Action - The MIN Function
+    What is it?
+    An aggregate function
+    What does it do?
+    Returns the minimum value from a specified column in a query result or group (for ex: sorting alphabetically)
+    How do you use it?
+    MIN(column) or MIN(expression)
+## SQL in Action - The MAX Function
+    What is it?
+    An aggregate function
+    What does it do?
+    Returns the maximum value from a specified column in a query result or group (for ex: sorting alphabetically)
+    How do you use it?
+    MAX(column) or MAX(expression)
