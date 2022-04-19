@@ -69,3 +69,10 @@
     Returns the sum of the values of a specified column in a query result or group
     How do you use it?
     SUM(column) or SUM(expression)
+## SQL in Action - The GROUP BY Clause
+    What is it?
+    A clause that groups records in a query result
+    What does it do?
+    Allows aggregate functions to be applied to subsets of records within a result, rather than to all records
+    How do you use it?
+    Group by a column or columns of repeating data
