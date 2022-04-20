@@ -34,8 +34,7 @@ try:
     # Replacing single row insert with multiple rows insert using
     # executemany
     with connection.cursor() as cursor:
-        rows = cursor.executemany("DELETE FROM Friends WHERE name = %s;",
-                                  ['bob', 'jim'])
+        cursor.execute("DELETE FROM Friends WHERE name in ('jim', 'bob')")
         connection.commit()
 finally:
     # Close the connection, regardless of whether the above was successful
