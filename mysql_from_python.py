@@ -34,8 +34,11 @@ try:
     # Replacing single row insert with multiple rows insert using
     # executemany
     with connection.cursor() as cursor:
-        cursor.execute("UPDATE Friends SET Age = %s WHERE name = %s;",
-                       (23, 'Bob'))
+        rows = [(23, 'Bob'),
+                (24, 'Jim'),
+                (25, 'Fred')]
+        cursor.executemany("UPDATE Friends SET Age = %s WHERE name = %s;",
+                           rows)
         connection.commit()
 finally:
     # Close the connection, regardless of whether the above was successful
