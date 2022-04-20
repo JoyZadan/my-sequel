@@ -34,7 +34,8 @@ try:
     # Replacing single row insert with multiple rows insert using
     # executemany
     with connection.cursor() as cursor:
-        rows = cursor.execute("DELETE FROM Friends WHERE name = 'Bob';")
+        row = ("Bob", 21, "1990-02-06 23:04:56")
+        cursor.execute("INSERT INTO Friends VALUES (%s, %s, %s);", row)
         connection.commit()
 finally:
     # Close the connection, regardless of whether the above was successful
