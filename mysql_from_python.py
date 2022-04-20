@@ -32,14 +32,16 @@ try:
     # for row in cursor:
     # print(row)
     # Creates a table (replaced code from walkthrough with below)
+    # Replacing single row insert with multiple rows insert using
+    # executemany
     with connection.cursor() as cursor:
         SEQUEL = """CREATE TABLE IF NOT EXISTS
                     Friends(name char(20), age int, DOB datetime);"""
-        row = ("Bob", 21, "1990-02-06 23:04:56")
-        cursor.execute("INSERT INTO Friends VALUES (%s, %s, %s);", row)
+        rows = [("Bob", 21, "1990-02-06 23:04:56"),
+                ("Jim", 56, "1995-05-09 14:12:45"),
+                ("Fred", 100, "1911-09-12 01:01:01")]
+        cursor.executemany("INSERT INTO Friends VALUES (%s, %s, %s);", rows)
         connection.commit()
-        # Note that the above will still display a warning (not error) if the
-        # table already exists
 finally:
     # Close the connection, regardless of whether the above was successful
     connection.close()
