@@ -2,7 +2,6 @@
 Imports
 """
 import os
-import datetime
 import pymysql
 
 # Our username is stored in the Gitpod workspace as an environment variable
@@ -35,7 +34,8 @@ try:
     # Replacing single row insert with multiple rows insert using
     # executemany
     with connection.cursor() as cursor:
-        cursor.execute("UPDATE Friends SET Age = 22 WHERE name = 'Bob';")
+        cursor.execute("UPDATE Friends SET Age = %s WHERE name = %s;",
+                       (23, 'Bob'))
         connection.commit()
 finally:
     # Close the connection, regardless of whether the above was successful
